@@ -37,13 +37,14 @@ def move(board,index,character="X")
 end
 
 def turn(board)
-  puts "Please enter 1-9:"
+  index = nil
 
-  while true != false
+  while (index==nil || !index.between?(0,8))
+    puts "Please enter 1-9:"
+
     input = gets.chomp
     index = input_to_index(input.to_i)
 
     puts index
-    puts "Please enter 1-9:"
   end
 end
