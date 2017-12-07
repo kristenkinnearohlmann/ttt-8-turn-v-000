@@ -37,7 +37,9 @@ def move(board,index,character="X")
 end
 
 def turn(board)
-  index = 99
+  puts "Please enter 1-9:"
+  input = gets.chomp
+  index = input_to_index(input.to_i)
 
   while !valid_move?(board,index)
     puts "Please enter 1-9:"
