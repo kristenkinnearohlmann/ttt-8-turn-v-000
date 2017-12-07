@@ -39,15 +39,13 @@ end
 def turn(board)
   index = nil
 
-  if valid_move?(board,index)
-    move(board,index)
-    display_board(board)
-  else
-    while (index==nil || !index.between?(0,8))
-      puts "Please enter 1-9:"
+  while (index==nil || !index.between?(0,8))
+    puts "Please enter 1-9:"
 
-      input = gets.chomp
-      index = input_to_index(input.to_i)
-    end
+    input = gets.chomp
+    index = input_to_index(input.to_i)
   end
+
+  move(board,index)
+  display_board(board)
 end
