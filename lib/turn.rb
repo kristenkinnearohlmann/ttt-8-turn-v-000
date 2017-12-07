@@ -37,8 +37,8 @@ def move(board,index,character="X")
 end
 
 def turn(board)
-  index = nil
-  
+  index = 999
+
   while !valid_move?(board,index)
     puts "Please enter 1-9:"
     input = gets.chomp
