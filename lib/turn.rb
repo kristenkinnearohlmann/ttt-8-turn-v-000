@@ -44,5 +44,6 @@ def turn(board)
     index = input_to_index(input.to_i)
 
     puts index
+    puts "Please enter 1-9:"
   end
 end
